@@ -1,0 +1,44 @@
+.menu{
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 70%;
+    left: 150px;
+    top: 150px;
+    text-align: right;
+
+    &__bar{
+        position: absolute;
+        right: 50px;
+        height: 220px;
+        width: 3px;
+        background-image: url(/dist/assets/images/menu-bar.png);
+    }
+
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 1rem;
+        height: 32px;
+        width: 232px;
+        background-image: url(/dist/assets/images/button-menu-bg-mobile.png);
+        background-repeat: no-repeat;
+       
+        margin-bottom: 1.9rem;
+
+    }
+
+    &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 0.5rem;
+        height: 32px;
+        width: 84px;
+        margin-right: 3rem;
+        background-image: url(/dist/assets/images/button-menu-bg-mobile.png);
+        background-repeat: no-repeat;
+    }
+}

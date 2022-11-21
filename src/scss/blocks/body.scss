@@ -1,0 +1,15 @@
+@use '../mixins/pseudo.scss' as *;
+
+html {
+}
+body {
+    position: relative;
+   &::after{
+@include pseudo(100%, 100%){
+    top: 0;
+    position: fixed;
+    background-image: url(/dist/assets/images/crt-effect.svg);
+
+}
+   } 
+}
