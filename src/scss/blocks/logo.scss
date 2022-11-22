@@ -1,3 +1,35 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
 .logo{
+    font-family: red-seven;
     margin-left: 1rem;
+  
+
+}
+
+.header-logo{
+    font-family: red-seven;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+    animation-name: intro;
+    animation-duration: 1.5s;
+
+    @keyframes intro {
+        0% {
+            transform: translateY(10px);
+            color: transparent;
+        }
+      
+
+        100%{
+            color: var(--white) ;
+            transform: translateY(0px);
+            
+        }
+    }
 }

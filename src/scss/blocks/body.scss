@@ -1,15 +1,31 @@
 @use '../mixins/pseudo.scss' as *;
 
 html {
+    font-size: 16px;
 }
-body {
-    position: relative;
-//    &::after{
-// @include pseudo(100%, 100%){
-//     top: 0;
-//     position: fixed;
-//     background-image: url(/dist/assets/images/crt-effect.svg);
 
-// }
-//    } 
+@font-face{
+    font-family: fotr;
+    src: url(/dist/assets/fonts/fot-rodin-pro-cufonfonts/FOTRodin-Pro-M.otf);
+}
+
+@font-face{
+
+    font-family: red-seven;
+    src: url(/dist/assets/fonts/red-seven/Red\ Seven.otf);
+}
+
+body {
+    font-family: fotr;
+    font-weight: 500;
+    background: linear-gradient();
+    position: relative;
+   &::after{
+@include pseudo(100%, 100%){
+    top: 0;
+    position: fixed;
+    background-image: url(/dist/assets/images/crt-effect.svg);
+
+}
+   } 
 }

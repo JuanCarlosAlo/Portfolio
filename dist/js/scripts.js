@@ -1,19 +1,12 @@
 const menu = document.getElementById('menu')
 const menuIcon = document.getElementById('menu-icon')
-
+const rootStyles= document.documentElement.style;
 
 menuIcon.addEventListener('click' , () => {
-    if(menu.classList.contains('menu--show')){
-
-        menu.classList.remove('menu--show')
-        menu.classList.add('menu')
-        header.classList.remove('header--menu')
-        header.classList.add('header')
-    }
-    else{
-        menu.classList.add('menu--show')
-        menu.classList.remove('menu')
-        header.classList.add('header--menu')
-        header.classList.remove('header')
-    }
+    rootStyles.setProperty('--transition-duration',1 + 's')
+    menu.classList.toggle('menu--show')
 });
+
+window.addEventListener('resize' ,() => {
+    rootStyles.setProperty('--transition-duration',0)
+})
