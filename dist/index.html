@@ -18,20 +18,12 @@
   <body>
     <header class="header">
       <div class="header__top">
-        <h1 class="header-title">JCAM</h1>
-        <hr class="header__hr">
-        <div class="header__top-subtitles">
-          <p>WEB DEVELOPER</p>
-          <P>DESIGNER</P>
-        </div>
-     
-      </div>
-      
-
-      <div class="header__bottom">
         <div class="logo">JCAM</div>
+        <div class="dark-mode">
+          <div class="dark-mode__button"></div>
+        </div>
         <nav>
-          <ul class="menu">
+          <ul id="menu" class="menu">
             <div class="menu__bar"></div>
             <li class="menu__item">
               <a href="#" class="menu__link">ABOUT ME</a>
@@ -47,14 +39,29 @@
             </li>
            
           </ul>
-          <div class="menu__icon">MENU</div>
+          <div id="menu-icon" class="menu__icon">MENU</div>
         </nav>
       </div>
+
+
+      <div class="header__bottom">
+        <h1 class="header-title">JCAM</h1>
+        <hr class="header__hr">
+        <div class="header__bottom-subtitles">
+          <p>WEB DEVELOPER</p>
+          <P>DESIGNER</P>
+        </div>
+     
+      </div>
+      
+
+      
       
     </header>
     <main class="main">
 
       <article class="article">
+        <div class="article-content">
         <h2 class="article-title">
           ABOUT ME
         </h2>
@@ -62,14 +69,33 @@
           Lorem ipsum dolor sit amet consectetur adipiscing elit viverra pharetra et, odio curabitur lobortis netus aliquam vestibulum fringilla dui duis euismod, penatibus ultrices id aliquet tortor 
         </p>
         <p class="text text--margin-bottom">Lorem ipsum dolor sit amet consectetur adipiscing elit viverra pharetra et, odio curabitur lobortis netus aliquam vestibulum fringilla dui duis euismod, penatibus ultrices id aliquet tortor </p>
+      </div>
         <div class="about-me-img">
           <img src="/dist/assets/images/jc.png" alt="">
           <img src="/dist/assets/images/img-border.svg" alt="">
         </div>
+        
        
 
+      </article>
+
+      <article class="article article--reverse">
+        <div class="article-content">
+        <h2 class="article-title">
+          WEB PROJECTS
+        </h2>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit viverra pharetra et, odio curabitur lobortis netus aliquam vestibulum fringilla dui duis euismod, penatibus ultrices id aliquet tortor 
+        </p>
+
+
+      </div>
+
+
+      
       </article>
     </main>
     <footer class="footer"></footer>
   </body>
+  <script src="/dist/js/scripts.js"></script>
 </html>

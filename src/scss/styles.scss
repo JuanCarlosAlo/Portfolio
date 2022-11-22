@@ -1,5 +1,6 @@
 @use 'base/normalize.scss';
 @use 'base/initial-reset.scss';
+@use 'config/variables.scss';
 @use 'blocks/body.scss';
 @use 'blocks/titles.scss';
 @use 'blocks/texts.scss';
@@ -8,6 +9,5 @@
 @use 'blocks/footer.scss';
 @use 'blocks/menu.scss';
 @use 'blocks/logo.scss';
-@use 'config/variables.scss';
 @use 'blocks/article.scss';
 @use 'blocks/img.scss';

@@ -6,16 +6,14 @@
 
 
 .header{
-    &__top{
+    &__bottom{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        height: calc(100vh + 62px);
+        height: 100vh;
         background-color: red;
         margin-bottom: 1rem;
-
-        
 
         &-subtitles{
             display: flex;
@@ -29,29 +27,46 @@
         width: 60%;
         height: 2px;
         background-color: white;
+
+        @include responsive(laptop) {
+            width: 40%;
+        }
     }
     
 
 
-    &__bottom{
+    &__top{
         display:flex ;
         flex-direction: row;
         justify-content: space-between;
         position: relative;
-        background-color: var(--dark-blue);
+        background-color: var(--light-blue);
         height: 62px;
-        width: 95%;
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
         align-items: center;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+
+        @include responsive(laptop) {
+            justify-content: space-evenly;
+            width: 90%;
+        }
  
     }
 
-    @include responsive(laptop) {
-        &__bottom{
-            background-image: url(/dist/assets/images/menu-bg-dark.svg);
-        }
-    }
+   
+}
+
+.dark-mode{
+    height: 40px;
+    width: 80px;
+    background-color: var(--dark-blue);
+
+    
 }
 
 
