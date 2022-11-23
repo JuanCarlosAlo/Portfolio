@@ -369,6 +369,8 @@ a {
   --center-dark:hsl(240, 11%, 30%);
   --corner-darker: hsl(224, 16%, 26%);
   --transition-duration:0;
+  --titles: 2rem;
+  --text: 0.75rem;
 }
 
 /* Variables SASS */
@@ -413,6 +415,7 @@ body::after {
   background-color: var(--light-blue);
   height: 62px;
   width: 100%;
+  padding-top: 1rem;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
@@ -468,16 +471,31 @@ body::after {
 
 .dark-mode {
   height: 30px;
-  width: 60px;
+  width: 80px;
   background-color: var(--dark-blue);
+}
+.dark-mode__button {
+  height: 30px;
+  width: 35px;
+  background-color: var(--buttons);
+  border: solid 1px var(--dark-blue);
 }
 
 /* ESTILOS DEL FOOTER */
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 1rem;
+  justify-content: space-evenly;
+}
+
 .menu {
   position: absolute;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
+  align-items: center;
   width: 100%;
   height: calc(100vh - 62px);
   left: 0;
@@ -485,7 +503,6 @@ body::after {
   text-align: center;
   width: 100%;
   padding: 4rem;
-  align-items: center;
   background: linear-gradient(90deg, var(--corner-dark), var(--center-light) 10%, var(--center-light) 90%, var(--corner-dark));
   opacity: 0;
 }
@@ -497,9 +514,11 @@ body::after {
     top: 0;
     flex-direction: row;
     width: 900px;
+    height: 62px;
     padding: 0;
     justify-content: space-evenly;
     background: transparent;
+    opacity: 1;
   }
 }
 .menu__bar {
@@ -511,22 +530,21 @@ body::after {
 }
 @media screen and (min-width: 1024px) {
   .menu__bar {
-    height: 40px;
+    height: 30px;
     right: 20px;
   }
 }
 .menu__item {
   font-size: 0.8rem;
   position: relative;
-  display: none;
   align-items: center;
+  display: flex;
   justify-content: flex-end;
   padding-right: 1rem;
   height: 30px;
   width: 250px;
   background-color: var(--buttons);
   margin-bottom: 1.9rem;
-  opacity: 0;
 }
 @media (hover: hover) {
   .menu__item:hover {
@@ -575,10 +593,6 @@ body::after {
 .menu--show {
   opacity: 1;
   transition: opacity 0.7s;
-}
-.menu__item--show {
-  opacity: 1;
-  transition: opacity 1s;
 }
 
 .logo {
