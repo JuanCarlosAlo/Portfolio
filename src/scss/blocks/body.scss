@@ -18,12 +18,18 @@ html {
 body {
     font-family: fotr;
     font-weight: 500;
-    background: linear-gradient();
     position: relative;
+    background: linear-gradient(
+        90deg,
+        var(--corner-dark),
+       var(--center-light)20%,
+       var(--center-light)80%,
+       var(--corner-dark));
    &::after{
 @include pseudo(100%, 100%){
     top: 0;
     position: fixed;
+    z-index: 10;
     background-image: url(/dist/assets/images/crt-effect.svg);
 
 }

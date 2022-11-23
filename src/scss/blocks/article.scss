@@ -8,14 +8,14 @@
     flex-direction: column;
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-bottom: 8rem;
+    margin-bottom: 10rem;
 
     @include responsive(laptop) {
         flex-direction: row;
         width: 70%;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 10rem;
+        margin-bottom: 15rem;
         gap: 10%;
     }
 

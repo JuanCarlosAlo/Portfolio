@@ -16,10 +16,16 @@
     width: 100%;
     padding: 4rem;
     align-items: center;
-    background: var(--dark-blue);
-    transform: translateX(-100%);
-    transition: transform var(--transition-duration);
-
+    background: linear-gradient(
+        90deg,
+        var(--corner-dark),
+       var(--center-light)10%,
+       var(--center-light)90%,
+       var(--corner-dark)
+    );
+    opacity: 0;
+  
+   
     @include responsive(laptop) {
         font-size: 1rem;
         display: flex;
@@ -29,8 +35,8 @@
         width: 900px;
         padding: 0;
         justify-content: space-evenly;
-        background-color: transparent;
-        transform: translateX(0);
+        background: transparent;
+       
         
     }
 
@@ -50,16 +56,16 @@
     &__item{
         font-size: 0.8rem;
         position: relative;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: flex-end;
         padding-right: 1rem;
-        height: 40px;
+        height: 30px;
         width: 250px;
         background-color: var(--buttons);
         margin-bottom: 1.9rem;
-   
-      
+        opacity: 0;
+        
 
         &:hover{
             @include hover{
@@ -81,7 +87,6 @@
 
        
        
-
     }
 
     &__icon{
@@ -89,9 +94,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 40px;
+        height: 30px;
         width:100px;
         margin-right: 3rem;
+        font-size: 0.8rem;
         background-color: var(--buttons);
         background-repeat: no-repeat;
 
@@ -114,9 +120,17 @@
     }
 
     &--show{
-        transform: translateX(0);
-    
-    
+        
+        opacity: 1;
+        transition: opacity 0.7s;
+        
+       
     }
+    &__item--show{
+
+        opacity: 1;
+        transition: opacity 1s;
+    }
+
 }
 

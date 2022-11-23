@@ -35,7 +35,12 @@
         flex-direction: column;
         height: 100vh;
         background-color: red;
-        margin-bottom: 1rem;
+        margin-bottom: 10rem;
+
+        
+        @include responsive(laptop) {
+            margin-bottom: 15rem;
+        }
 
         &-subtitles{
             font-size: 0.8rem;
@@ -84,8 +89,8 @@
 }
 
 .dark-mode{
-    height: 40px;
-    width: 80px;
+    height: 30px;
+    width: 60px;
     background-color: var(--dark-blue);
 
     
