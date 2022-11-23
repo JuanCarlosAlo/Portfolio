@@ -26,7 +26,7 @@ body {
        var(--center-light)80%,
        var(--corner-dark));
    &::after{
-@include pseudo(100%, 100%){
+    @include pseudo(100%, 100%){
     top: 0;
     position: fixed;
     z-index: 10;
