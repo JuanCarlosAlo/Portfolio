@@ -23,13 +23,13 @@
     width: 100%;
     padding: 4rem;
    
-    background: linear-gradient(
-        90deg,
-        var(--corner-dark),
-        var(--center-light)10%,
-        var(--center-light)90%,
-        var(--corner-dark)
-    );
+    // background: linear-gradient(
+    //     90deg,
+    //     var(--corner-dark),
+    //     var(--center-light)10%,
+    //     var(--center-light)90%,
+    //     var(--corner-dark)
+    // );
     opacity: 0;
   
    
@@ -39,7 +39,7 @@
         position: relative;
         top: 0;
         flex-direction: row;
-        width: 900px;
+        width: 800px;
         height: 62px;
         padding: 0;
         justify-content: space-evenly;
@@ -49,16 +49,38 @@
         
     }
 
+    @include responsive(tablet) {
+        font-size: 1rem;
+        display: flex;
+        position: relative;
+        top: 0;
+        flex-direction: row;
+        width: 650px;
+        height: 62px;
+        padding: 0;
+        justify-content: space-evenly;
+        background: transparent;
+        opacity: 1;
+       
+        
+    }
+    
+
     &__bar{
         position: absolute;
-        right: 10%;
-        height: 255px;
+        right: 20px;
+        height: 215px;
         width: 5px;
         background-color: var(--buttons);
 
         @include responsive(laptop) {
             height: 30px;
             right: 20px; 
+        }
+
+        @include responsive(tablet) {
+            height: 30px;
+            right: 10px; 
         }
     }
 
@@ -94,6 +116,13 @@
             padding-right: 0;
         }
 
+        @include responsive(tablet) {
+            margin-bottom: 0;
+            width: 135px;
+            justify-content: center;
+            padding-right: 0;
+        }
+
        
        
     }
@@ -105,7 +134,7 @@
         justify-content: center;
         height: 30px;
         width:100px;
-        margin-right: 3rem;
+        margin-right: 1rem;
         font-size: 0.8rem;
         background-color: var(--buttons);
         background-repeat: no-repeat;
@@ -124,6 +153,10 @@
 
 
         @include responsive(laptop) {
+            display: none;
+        }
+
+        @include responsive(tablet) {
             display: none;
         }
     }

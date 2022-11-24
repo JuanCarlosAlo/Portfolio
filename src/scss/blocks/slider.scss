@@ -1,0 +1,23 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.slider{
+    
+   overflow: hidden;
+   width: 100%; 
+  
+
+   &__container{
+    display: flex;
+    width: 200%;
+
+   }
+
+   
+   &__content{
+    width: 100%;
+}
+   
+}

@@ -35,7 +35,7 @@
         justify-content: center;
         flex-direction: column;
         height: 100vh;
-        background-color: red;
+        background-color: rgb(26, 26, 26);
         margin-bottom: 10rem;
 
         
@@ -47,8 +47,7 @@
             font-size: 0.8rem;
             display: flex;
             justify-content: center;
-            gap: 10%;
-            width: 60%;
+           
             color: var(--white);
             animation-name: subintro;
             animation-duration: 3s;
@@ -83,6 +82,8 @@
         @include responsive(laptop) {
             width: 40%;
         }
+
+        
     }
     
 
@@ -93,6 +94,15 @@
     height: 30px;
     width: 80px;
     background-color: var(--dark-blue);
+    display: none;
+
+    @include responsive(laptop) {
+        display: block;
+    }
+
+    @include responsive(tablet) {
+        display: none;
+    }
 
     &__button{
         height: 30px;

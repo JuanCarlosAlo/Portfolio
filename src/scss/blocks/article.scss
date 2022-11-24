@@ -12,21 +12,43 @@
 
     @include responsive(laptop) {
         flex-direction: row;
-        width: 70%;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 15rem;
-        gap: 10%;
+        justify-content: space-between;
+        padding-left: var(--padding-left-right-desktop);
+        padding-right:var(--padding-left-right-desktop) ;
     }
+
+    @include responsive(tablet) {
+        align-items: center;
+        padding-left: var(--padding-left-right-tablet);
+        padding-right:var(--padding-left-right-tablet) ;
+    }
+
 
     &--reverse{
         flex-direction: row-reverse;
         text-align: right;
+        color: var(--light-blue);
+        background: linear-gradient(
+            90deg,
+           var(--corner-darker),
+           var(--center-dark)20%,
+           var(--center-dark)80%,
+           var(--corner-darker));
+
+           @include responsive(laptop) {
+
+           padding-left: var(--padding-left-right-desktop);
+           padding-right:var(--padding-left-right-desktop) ;
+        }
+
     }
 }
 
 .article-content{
     @include responsive(laptop) {
-        width: 60%;
+       
     }
 }
