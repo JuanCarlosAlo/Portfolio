@@ -68,25 +68,6 @@
             
         }
     }
-
-    &__hr{
-        width: 60%;
-        height: 1px;
-        background:linear-gradient(
-            to right,
-            transparent 20%,
-            var(--white) 50%,
-            transparent) 80%;
-           
-
-        @include responsive(laptop) {
-            width: 40%;
-        }
-
-        
-    }
-    
-
    
 }
 

@@ -1,0 +1,24 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.hr{
+    width: 60%;
+    height: 1px;
+    background:linear-gradient(
+    to right,
+    transparent,
+    var(--white) 50%,
+    transparent) 80%;
+   &--main{
+    height: 1px;
+    width: 100%;
+    background-color: var(--white)
+   }
+
+@include responsive(laptop) {
+    width: 40%;
+}
+
+}

@@ -16,9 +16,11 @@ html {
 }
 
 body {
+    position: relative;
+   
     font-family: fotr;
     font-weight: 500;
-    position: relative;
+    
     background: linear-gradient(
         90deg,
         var(--corner-dark),

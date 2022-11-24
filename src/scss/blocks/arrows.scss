@@ -1,0 +1,14 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.arrow-left{
+    position: absolute;
+    left: -100px;
+    bottom: 400px;
+    width: 70px;
+    height: 100px;
+    background-image: url(/dist/assets/images/arrow-left-var.svg);
+    background-repeat: no-repeat;
+}
