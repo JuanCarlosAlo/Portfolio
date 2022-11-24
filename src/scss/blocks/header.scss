@@ -71,28 +71,6 @@
    
 }
 
-.dark-mode{
-    height: 30px;
-    width: 80px;
-    background-color: var(--dark-blue);
-    display: none;
 
-    @include responsive(laptop) {
-        display: block;
-    }
-
-    @include responsive(tablet) {
-        display: none;
-    }
-
-    &__button{
-        height: 30px;
-        width: 35px;
-        background-color: var(--buttons);
-        border: solid 1px var(--dark-blue);
-    }
-
-    
-}
 
 
