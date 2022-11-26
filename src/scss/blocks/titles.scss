@@ -1,5 +1,26 @@
-
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
 .article-title{
-    font-size: var(--titles);
+    display: inline-block;
    text-shadow: 5px 4px 4px rgb(0 0 0 /.5);
+   color: var(--light-blue);
+   font-weight: 300;
+   margin-bottom: 2remrem;
+   font-size: var(--titles-mobile);
+
+   @include responsive(laptop) {
+    font-size: var(--titles);
+    }
+&--slider{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    @include responsive(laptop) {
+        padding-left: 0;
+        padding-right: 0;
+        }
+
+}
+
 }

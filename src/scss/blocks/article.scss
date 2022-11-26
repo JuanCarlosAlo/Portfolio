@@ -4,10 +4,11 @@
 @use "../config/variables.scss" as *;
 
 .article{
-  
+    padding-top: 10rem;
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 10rem;
+    
 
     @include responsive(laptop) {
         flex-direction: row;
@@ -22,17 +23,10 @@
     
 
 
-    &--reverse{
-        flex-direction: column;
-        text-align: right;
-      
-        // background: linear-gradient(
-        //     90deg,
-        //    var(--corner-darker),
-        //    var(--center-dark)20%,
-        //    var(--center-dark)80%,
-        //    var(--corner-darker));
-
+    &--slider{
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
            @include responsive(laptop) {
 
            padding-left: var(--padding-left-right-desktop);
@@ -44,7 +38,7 @@
 
 .article-content{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     position: relative;
     @include responsive(laptop) {
         flex-direction: row;

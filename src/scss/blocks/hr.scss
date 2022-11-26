@@ -12,9 +12,40 @@
     var(--white) 50%,
     transparent) 80%;
    &--main{
-    height: 1px;
-    width: 100%;
-    background-color: var(--white)
+    position: relative;
+     height: 1px;
+     width: 120%;
+     background-color: var(--white);
+
+     &::after {
+        @include pseudo (10px, 10px){
+            background-color: var(--light-blue);
+            right: 0;
+            top: -10px;
+        }
+     }
+ 
+   }
+
+   &--menu{
+    position: relative;
+     height: 1px;
+     width: 120%;
+     background-color: var(--white);
+    top: 15px;
+     &::after {
+        @include pseudo (10px, 10px){
+            background-color: var(--light-blue);
+            right: 0;
+            top: -10px;
+        }
+     }
+     @include responsive(laptop) {
+        display: none;
+    }
+    @include responsive(tablet) {
+        display: none;
+    }
    }
 
 @include responsive(laptop) {

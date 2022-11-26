@@ -5,10 +5,57 @@
 
 .arrow-left{
     position: absolute;
-    left: -100px;
-    bottom: 400px;
-    width: 70px;
-    height: 100px;
-    background-image: url(/dist/assets/images/arrow-left-var.svg);
+    bottom: 100px;
+    width: 35px;
+    height: 35px;
+    left: 5px;
+    background-image: url(/dist/assets/images/ic_arrow.svg);
     background-repeat: no-repeat;
+    background-size: contain;
+
+    @include responsive(tablet) {
+        width: 50px;
+        height: 50px;
+        bottom: 70px;
+
+    }
+
+    @include responsive(laptop) {
+        left: 5%;
+        bottom:320px;
+        width: 50px;
+        height: 70px;
+
+    }
+
+   
+
+}
+
+.arrow-right{
+    position: absolute;
+    right: 5px;
+    bottom: 100px;
+    width: 35px;
+    height: 35px;
+    background-image: url(/dist/assets/images/ic_arrow.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+   transform: rotate(180deg);
+
+   @include responsive(tablet) {
+    width: 50px;
+    height: 50px;
+    bottom: 70px;
+
+}
+
+
+   @include responsive(laptop) {
+    right: 5%;
+    bottom: 320px;
+    width: 50px;
+    height: 70px;
+
+}
 }

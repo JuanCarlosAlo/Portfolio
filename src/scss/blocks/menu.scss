@@ -23,13 +23,7 @@
     width: 100%;
     padding: 4rem;
    
-    // background: linear-gradient(
-    //     90deg,
-    //     var(--corner-dark),
-    //     var(--center-light)10%,
-    //     var(--center-light)90%,
-    //     var(--corner-dark)
-    // );
+    background-color:rgba(0, 0, 0, 0.6);
     opacity: 0;
   
    
@@ -85,42 +79,55 @@
     }
 
     &__item{
-        font-size: 0.8rem;
+       
         position: relative; 
         align-items: center;
         display: flex;
-        justify-content: flex-end;
+        flex-wrap: wrap;
+        justify-content: flex-start;
         padding-right: 1rem;
-        height: 30px;
+        font-size: 1.2rem;
         width: 250px;
-        background-color: var(--buttons);
-        margin-bottom: 1.9rem;
+        color: var(--buttons);
+        margin-bottom: 2.5rem;
 
         
 
-        &:hover{
-            @include hover{
-                background-color: var(--dark-blue);
-                color: var(--light-blue);
-
-                &::after{
-                    background-color: var(--dark-blue);
-                }
-            }
-        }
+       
 
         @include responsive(laptop) {
             margin-bottom: 0;
             width: 150px;
+            height: 30px;
+            font-size: 0.8rem;
             justify-content: center;
             padding-right: 0;
+            background-color: var(--buttons);
+            color: var(--darkblue);
+
+            &:hover{
+                @include hover{
+                    background-color: var(--dark-blue);
+                    color: var(--light-blue);
+                    height: 42px;
+                    transform: translateY(3px);
+    
+                    &::after{
+                        background-color: var(--dark-blue);
+                    }
+                }
+            }
         }
 
         @include responsive(tablet) {
             margin-bottom: 0;
             width: 135px;
+            height: 30px;
+            font-size: 0.8rem;
             justify-content: center;
             padding-right: 0;
+            background-color: var(--buttons);
+            color: var(--darkblue);
         }
 
        
@@ -139,17 +146,7 @@
         background-color: var(--buttons);
         background-repeat: no-repeat;
 
-        &:hover{
-            @include hover{
-                cursor: pointer;
-                background-color: var(--dark-blue);
-                color: var(--light-blue);
-
-                &::after{
-                    background-color: var(--dark-blue);
-                }
-            }
-        }
+       
 
 
         @include responsive(laptop) {

@@ -1,5 +1,5 @@
 :root {
-  --dark-blue: hsl(240, 4%, 33%);
+  --dark-blue: rgb(81, 81, 88);
   --buttons:hsl(224, 9%, 64%);
   --light-blue:hsl(211, 21%, 80%);
   --white: hsl(182, 100%, 97%);
@@ -18,7 +18,8 @@
 
   //Font size
 
-  --titles:2rem;
+  --titles:3rem;
+  --titles-mobile:2rem;
   --text:0.75rem;
 
 
