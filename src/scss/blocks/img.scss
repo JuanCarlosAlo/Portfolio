@@ -3,9 +3,43 @@
 @use "../mixins/hover.scss" as *;
 
 .about-me-img{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: aliceblue;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+       &::after{
+            @include pseudo(100%, 100%){ 
+            display: block;
+            top: 0;
+            background-image: url(../assets/images/glitch.png);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: 12px;
+            opacity: 0.5;
+            background-position: center;
+            animation-name: glitch;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+    
+   
+
+            @keyframes glitch{
+                to{
+                    background-position: 0 -2px;
+                }
+
+            }
+
+
+}
+   } 
     
    
 

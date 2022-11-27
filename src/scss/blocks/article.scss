@@ -4,7 +4,7 @@
 @use "../config/variables.scss" as *;
 
 .article{
-    padding-top: 10rem;
+    
     padding-left: 1rem;
     padding-right: 1rem;
     margin-bottom: 10rem;
@@ -20,10 +20,17 @@
         padding-right:var(--padding-left-right-desktop) ;
     }
 
+    &--personal{
+        padding-top: 5rem;
+        @include responsive(laptop) {
+            padding-top: 10rem;
+        }
+    }
     
 
 
     &--slider{
+        position: relative;
         padding-top: 0;
         padding-left: 0;
         padding-right: 0;

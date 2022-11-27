@@ -3,26 +3,28 @@
 @use "../mixins/hover.scss" as *;
 @use "../config/variables.scss" as *;
 
+
+.arrow{
+    filter: drop-shadow(5px 4px 2px rgb(0 0 0 /.8));
+    -webkit-filter: drop-shadow(5px 4px 2px rgb(0 0 0 /.8));
+}
 .arrow-left{
     position: absolute;
-    bottom: 100px;
-    width: 35px;
-    height: 35px;
-    left: 5px;
-    background-image: url(/dist/assets/images/ic_arrow.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    top: 35%;
+    width: 25px;
+    left: 1%;
+    
 
     @include responsive(tablet) {
+        top: 50%;
         width: 50px;
         height: 50px;
-        bottom: 70px;
+        left: 2%;
 
     }
 
     @include responsive(laptop) {
         left: 5%;
-        bottom:320px;
         width: 50px;
         height: 70px;
 
@@ -34,26 +36,25 @@
 
 .arrow-right{
     position: absolute;
-    right: 5px;
-    bottom: 100px;
-    width: 35px;
-    height: 35px;
-    background-image: url(/dist/assets/images/ic_arrow.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    right: 1%;
+    top: 35%;
+    width: 25px;
+    
+    
    transform: rotate(180deg);
 
    @include responsive(tablet) {
+    top: 50%;
     width: 50px;
     height: 50px;
-    bottom: 70px;
+    right: 2%;
+   
 
 }
 
 
    @include responsive(laptop) {
     right: 5%;
-    bottom: 320px;
     width: 50px;
     height: 70px;
 

@@ -17,7 +17,7 @@
 }
 &__img{
     width: 100%;
-    filter: grayscale(80%)
+
     
 }
 
@@ -44,6 +44,7 @@
 }
 
 .slider__container{
+    
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -51,10 +52,10 @@
     border: solid 2px var(--white);
 
     @include responsive(tablet) {
-        max-width:736px ;
+        max-width:600px ;
         
         }
- @include responsive(tablet) {
+ @include responsive(laptop) {
         max-width:1120px ;
         
         }
