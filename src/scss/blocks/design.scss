@@ -1,0 +1,137 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.grid-container{
+    display: grid;
+    gap: 40px;
+
+    @include responsive(tablet) {
+        
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    @include responsive(laptop) {
+        
+        grid-template-columns: 1fr 1fr 1fr;
+        
+    }
+   
+}
+
+.design{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px var(--dark-blue);
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-property: background-color, border;
+    transition-duration: 0.5s;
+    padding: 1rem;
+
+    @include responsive(laptop) {
+    
+    &:hover .design__preview{
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transform: scale(1.2);
+    }
+
+    &:hover .design__img::after{
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        opacity: 0;
+    }
+
+    &:hover .design__header__arrow{
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transform: translateX(-90%);
+    }
+    &:hover .design__header__arrow--right{
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transform: translateX(90%);
+    }
+    &:hover{
+        border: solid 1px lighten($light-blue, $amount: 1);
+        background-color: rgba(0, 0, 0, 0.8);
+        transition-property: background-color border;
+        transition-duration: 0.5s;
+       
+    }
+
+}
+
+    &__img{
+        position: relative;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        overflow: hidden;
+
+      
+        
+        &::after{
+            @include pseudo(100%, 100%){
+
+            display: block;
+            top: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(../assets/images/glitch.png);
+            background-position: center;
+            background-size: 12px;
+            transition-property: opacity;
+            transition-duration: 0.5s;
+            opacity: 0.5;
+            
+            @include responsive(laptop) {
+            animation-name: glitch;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+    
+            @keyframes glitch{
+                to{
+                    background-position: 0 -2px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+    &__preview{
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transform: scale(1);
+    }
+    
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &__arrow{
+            height: 30px;
+            transition-property: transform;
+            transition-duration: 0.5s;
+            transform: translateX(0);
+
+            &--right{
+                height: 30px;
+                transition-property: transform;
+                transition-duration: 0.5s;
+                transform: translateX(0);
+            }
+        }
+    }
+
+
+}
+

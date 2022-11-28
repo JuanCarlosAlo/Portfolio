@@ -1,5 +1,11 @@
 
 
 .text{
-   
+   margin-bottom: 4rem;
+
+   &--slider{
+    padding-left: 1rem;
+    padding-right: 1rem;
+   }
 }
+

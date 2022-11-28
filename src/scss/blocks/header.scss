@@ -12,7 +12,8 @@
         flex-direction: row;
         justify-content: space-between;
         position: relative;
-        background-color:rgba(81, 81, 88, 0.8);
+        background-color:rgba(0, 0, 0, 0.5);
+        border-bottom: solid 1px var(--white);
         height: 62px;
         width: 100%;
         padding-top: 1rem;
@@ -20,16 +21,14 @@
         margin-right: auto;
         align-items: center;
         position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
         z-index: 100;
 
-        &::before{
-            @include pseudo (100%, 1px){
-                background-color: var(--buttons);
-                bottom: 0;
-            }
-        }
+        // &::before{
+        //     @include pseudo (100%, 1px){
+        //         background-color: var(--white);
+        //         bottom: 0;
+        //     }
+        // }
 
        
  
@@ -50,9 +49,11 @@
             display: flex;
             justify-content: center;
            
-            color: var(--white);
+            color: transparent;
             animation-name: subintro;
             animation-duration: 3s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
 
          @keyframes subintro {
             0% {

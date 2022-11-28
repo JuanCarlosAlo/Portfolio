@@ -1,1 +1,43 @@
-/* ESTILOS DEL FOOTER */
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+
+.footer{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--white);
+    
+
+    @include responsive(laptop) {
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-between;
+        padding-left: var(--padding-left-right-desktop);
+        padding-right:var(--padding-left-right-desktop) ;
+    }
+
+    &__bottom{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__button{
+        border: solid 1px var(--white);
+        width: 150px;
+        text-align: center;
+        padding-top: 0.75rem;
+        height: 3rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.socials{
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+}

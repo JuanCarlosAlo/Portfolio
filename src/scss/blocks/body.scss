@@ -2,7 +2,7 @@
 @use "../mixins/responsive.scss" as *;
 
 html {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 @font-face{
@@ -23,7 +23,7 @@ body {
     background: hsl(0,2%,13%)
     url(/dist/assets/images/background-pattern-mobile.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
 
    @include responsive(laptop) {

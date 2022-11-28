@@ -378,7 +378,7 @@ a {
 
 /* Variables SASS */
 html {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 @font-face {
@@ -395,7 +395,7 @@ body {
   font-weight: 500;
   background: hsl(0deg, 2%, 13%) url(/dist/assets/images/background-pattern-mobile.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
 }
 @media screen and (min-width: 1024px) {
@@ -430,12 +430,21 @@ body {
   }
 }
 
+.text {
+  margin-bottom: 4rem;
+}
+.text--slider {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .header__top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  background-color: rgba(81, 81, 88, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: solid 1px var(--white);
   height: 62px;
   width: 100%;
   padding-top: 1rem;
@@ -443,17 +452,7 @@ body {
   margin-right: auto;
   align-items: center;
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
   z-index: 100;
-}
-.header__top::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 1px;
-  background-color: var(--buttons);
-  bottom: 0;
 }
 .header__bottom {
   display: flex;
@@ -467,9 +466,11 @@ body {
   font-size: 0.8rem;
   display: flex;
   justify-content: center;
-  color: var(--white);
+  color: transparent;
   animation-name: subintro;
   animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 @keyframes subintro {
   0% {
@@ -482,7 +483,42 @@ body {
   }
 }
 
-/* ESTILOS DEL FOOTER */
+.footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: var(--white);
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    padding-left: var(--padding-left-right-desktop);
+    padding-right: var(--padding-left-right-desktop);
+  }
+}
+.footer__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.footer__button {
+  border: solid 1px var(--white);
+  width: 150px;
+  text-align: center;
+  padding-top: 0.75rem;
+  height: 3rem;
+  margin-bottom: 2rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-evenly;
+  width: 200px;
+}
+
 .main {
   margin-left: auto;
   margin-right: auto;
@@ -512,7 +548,9 @@ body {
   width: 100%;
   padding: 4rem;
   background-color: rgba(0, 0, 0, 0.6);
-  opacity: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 }
 @media screen and (min-width: 1024px) {
   .menu {
@@ -526,7 +564,7 @@ body {
     padding: 0;
     justify-content: space-evenly;
     background: transparent;
-    opacity: 1;
+    transform: scaleX(1);
   }
 }
 @media screen and (min-width: 640px) {
@@ -541,13 +579,13 @@ body {
     padding: 0;
     justify-content: space-evenly;
     background: transparent;
-    opacity: 1;
+    transform: scaleX(1);
   }
 }
 .menu__bar {
   position: absolute;
+  height: 30px;
   right: 20px;
-  height: 215px;
   width: 5px;
   background-color: var(--buttons);
 }
@@ -572,27 +610,32 @@ body {
   padding-right: 1rem;
   font-size: 1.2rem;
   width: 250px;
-  color: var(--buttons);
+  color: var(--white);
   margin-bottom: 2.5rem;
 }
 @media screen and (min-width: 1024px) {
   .menu__item {
+    justify-content: center;
+    padding-right: 0;
     margin-bottom: 0;
+    transition-property: transform, background-color, height;
+    transition-duration: 0.5s;
     width: 150px;
     height: 30px;
     font-size: 0.8rem;
-    justify-content: center;
-    padding-right: 0;
-    background-color: var(--buttons);
-    color: var(--darkblue);
+    background-color: transparent;
+    color: var(--white);
+    border: solid 1px var(--white);
   }
 }
 @media screen and (min-width: 1024px) and (hover: hover) {
   .menu__item:hover {
     background-color: var(--dark-blue);
     color: var(--light-blue);
-    height: 42px;
-    transform: translateY(3px);
+    transition-property: transform, background-color, height;
+    transition-duration: 0.5s;
+    transform: translateY(4px);
+    height: 39px;
   }
   .menu__item:hover::after {
     background-color: var(--dark-blue);
@@ -606,8 +649,9 @@ body {
     font-size: 0.8rem;
     justify-content: center;
     padding-right: 0;
-    background-color: var(--buttons);
-    color: var(--darkblue);
+    background-color: transparent;
+    color: var(--white);
+    border: solid 1px var(--white);
   }
 }
 .menu__icon {
@@ -619,8 +663,9 @@ body {
   width: 100px;
   margin-right: 1rem;
   font-size: 0.8rem;
-  background-color: var(--buttons);
-  background-repeat: no-repeat;
+  background-color: transparent;
+  color: var(--white);
+  border: solid 1px var(--white);
 }
 @media screen and (min-width: 1024px) {
   .menu__icon {
@@ -633,8 +678,9 @@ body {
   }
 }
 .menu--show {
-  opacity: 1;
-  transition: opacity 0.7s;
+  transform: scaleX(1);
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 .logo {
@@ -666,14 +712,14 @@ body {
 .article {
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 @media screen and (min-width: 1024px) {
   .article {
     flex-direction: row;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 15rem;
+    margin-bottom: 8rem;
     justify-content: space-between;
     padding-left: var(--padding-left-right-desktop);
     padding-right: var(--padding-left-right-desktop);
@@ -736,35 +782,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: aliceblue;
-  width: 250px;
-  height: 250px;
   overflow: hidden;
-}
-.about-me-img::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: block;
-  top: 0;
-  background-image: url(../assets/images/glitch.png);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: 12px;
-  opacity: 0.5;
-  background-position: center;
-  animation-name: glitch;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes glitch {
-  to {
-    background-position: 0 -2px;
-  }
 }
 @media screen and (min-width: 1024px) {
   .about-me-img {
@@ -800,6 +818,7 @@ body {
 .slider__buttons {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 640px) {
   .slider__buttons {
@@ -809,7 +828,6 @@ body {
 }
 
 .slider__container {
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -834,18 +852,35 @@ body {
 }
 .hr--main {
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
   height: 1px;
-  width: 120%;
+  width: 80%;
   background-color: var(--white);
+}
+@media screen and (min-width: 1024px) {
+  .hr--main {
+    margin-bottom: 7rem;
+  }
 }
 .hr--main::after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 4px;
+  height: 4px;
   background-color: var(--light-blue);
   right: 0;
-  top: -10px;
+  top: -2px;
+}
+.hr--main::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: var(--light-blue);
+  left: 0;
+  top: -2px;
 }
 .hr--menu {
   position: relative;
@@ -950,4 +985,118 @@ body {
     width: 50px;
     height: 70px;
   }
+}
+
+.grid-container {
+  display: grid;
+  gap: 40px;
+}
+@media screen and (min-width: 640px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 1px var(--dark-blue);
+  background-color: rgba(0, 0, 0, 0.5);
+  transition-property: background-color, border;
+  transition-duration: 0.5s;
+  padding: 1rem;
+}
+@media screen and (min-width: 1024px) {
+  .design:hover .design__preview {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transform: scale(1.2);
+  }
+  .design:hover .design__img::after {
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    opacity: 0;
+  }
+  .design:hover .design__header__arrow {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transform: translateX(-90%);
+  }
+  .design:hover .design__header__arrow--right {
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transform: translateX(90%);
+  }
+  .design:hover {
+    border: solid 1px #c4ced9;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition-property: background-color border;
+    transition-duration: 0.5s;
+  }
+}
+.design__img {
+  position: relative;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  overflow: hidden;
+}
+.design__img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../assets/images/glitch.png);
+  background-position: center;
+  background-size: 12px;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  opacity: 0.5;
+}
+@media screen and (min-width: 1024px) {
+  .design__img::after {
+    animation-name: glitch;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  @keyframes glitch {
+    to {
+      background-position: 0 -2px;
+    }
+  }
+}
+.design__preview {
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transform: scale(1);
+}
+.design__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.design__header__arrow {
+  height: 30px;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transform: translateX(0);
+}
+.design__header__arrow--right {
+  height: 30px;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transform: translateX(0);
 }

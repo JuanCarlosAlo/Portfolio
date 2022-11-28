@@ -13,15 +13,30 @@
     transparent) 80%;
    &--main{
     position: relative;
-     height: 1px;
-     width: 120%;
-     background-color: var(--white);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+    height: 1px;
+    width: 80%;
+    background-color: var(--white);
+
+    @include responsive(laptop) {
+        margin-bottom: 7rem;
+    }
 
      &::after {
-        @include pseudo (10px, 10px){
+        @include pseudo (4px, 4px){
             background-color: var(--light-blue);
             right: 0;
-            top: -10px;
+            top: -2px;
+        }
+     }
+
+     &::before {
+        @include pseudo (4px, 4px){
+            background-color: var(--light-blue);
+            left: 0;
+            top: -2px;
         }
      }
  

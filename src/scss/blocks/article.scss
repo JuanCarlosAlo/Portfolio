@@ -4,17 +4,17 @@
 @use "../config/variables.scss" as *;
 
 .article{
-    
+  
     padding-left: 1rem;
     padding-right: 1rem;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
     
 
     @include responsive(laptop) {
         flex-direction: row;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 15rem;
+        margin-bottom: 8rem;
         justify-content: space-between;
         padding-left: var(--padding-left-right-desktop);
         padding-right:var(--padding-left-right-desktop) ;

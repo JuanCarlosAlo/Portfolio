@@ -22,9 +22,10 @@
     text-align: center;
     width: 100%;
     padding: 4rem;
-   
     background-color:rgba(0, 0, 0, 0.6);
-    opacity: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.16,1,0.3,1);
   
    
     @include responsive(laptop) {
@@ -38,7 +39,7 @@
         padding: 0;
         justify-content: space-evenly;
         background: transparent;
-        opacity: 1;
+        transform: scaleX(1);
        
         
     }
@@ -54,7 +55,7 @@
         padding: 0;
         justify-content: space-evenly;
         background: transparent;
-        opacity: 1;
+        transform: scaleX(1);
        
         
     }
@@ -62,8 +63,8 @@
 
     &__bar{
         position: absolute;
-        right: 20px;
-        height: 215px;
+        height: 30px;
+        right: 20px; 
         width: 5px;
         background-color: var(--buttons);
 
@@ -88,29 +89,33 @@
         padding-right: 1rem;
         font-size: 1.2rem;
         width: 250px;
-        color: var(--buttons);
+        color: var(--white);
         margin-bottom: 2.5rem;
 
-        
-
-       
-
         @include responsive(laptop) {
+            justify-content: center;
+            padding-right: 0;
             margin-bottom: 0;
+            transition-property: transform, background-color, height;
+            transition-duration: 0.5s;
             width: 150px;
             height: 30px;
             font-size: 0.8rem;
-            justify-content: center;
-            padding-right: 0;
-            background-color: var(--buttons);
-            color: var(--darkblue);
+            background-color: transparent;
+            color: var(--white);
+            border: solid 1px var(--white);
 
             &:hover{
                 @include hover{
                     background-color: var(--dark-blue);
                     color: var(--light-blue);
-                    height: 42px;
-                    transform: translateY(3px);
+                    transition-property: transform, background-color, height;
+                    transition-duration: 0.5s;
+                    transform: translateY(4px);
+                    height: 39px;
+
+
+
     
                     &::after{
                         background-color: var(--dark-blue);
@@ -126,8 +131,9 @@
             font-size: 0.8rem;
             justify-content: center;
             padding-right: 0;
-            background-color: var(--buttons);
-            color: var(--darkblue);
+            background-color: transparent;
+            color: var(--white);
+            border: solid 1px var(--white);
         }
 
        
@@ -143,8 +149,9 @@
         width:100px;
         margin-right: 1rem;
         font-size: 0.8rem;
-        background-color: var(--buttons);
-        background-repeat: no-repeat;
+        background-color: transparent;
+        color: var(--white);
+        border: solid 1px var(--white);
 
        
 
@@ -159,9 +166,10 @@
     }
 
     &--show{
-        
-        opacity: 1;
-        transition: opacity 0.7s;
+        transform: scaleX(1);
+        transition: transform 0.5s;
+        transition-timing-function: cubic-bezier(0.87,0,0.13,1);
+
         
        
     }
