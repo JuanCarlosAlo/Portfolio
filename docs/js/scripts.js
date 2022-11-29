@@ -4,6 +4,7 @@ const rootStyles = document.documentElement.style;
 const arrowLeft = document.getElementById('arrow-left-slider')
 const arrowRight = document.getElementById('arrow-right-slider')
 const slider = document.getElementById('slider')
+const menuItem = document.getElementById('menu-item')
 
 const allSliderContent = Array.from(document.querySelectorAll('.slider__content'))
 
@@ -44,9 +45,15 @@ const prevSlide = () => {
 arrowRight.addEventListener('click', nextSlide)
 arrowLeft.addEventListener('click', prevSlide)
 
+const allMenuItems = document.querySelectorAll('.menu__item')
+
 menuIcon.addEventListener('click' , () => {
     rootStyles.setProperty('--transition-duration',1 + 's')
     menu.classList.toggle('menu--show')
+    allMenuItems.forEach(menuItem=>{
+        menuItem.classList.toggle('menu__item--show')
+    })
+    
 
 });
 

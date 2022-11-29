@@ -3,59 +3,49 @@
 @use "../mixins/hover.scss" as *;
 @use "../config/variables.scss" as *;
 
-
-.arrow{
-    filter: drop-shadow(5px 4px 2px rgb(0 0 0 /.8));
-    -webkit-filter: drop-shadow(5px 4px 2px rgb(0 0 0 /.8));
+.arrow {
+  filter: drop-shadow(5px 4px 2px rgb(0 0 0 /0.8));
+  -webkit-filter: drop-shadow(5px 4px 2px rgb(0 0 0 /0.8));
 }
-.arrow-left{
-    position: absolute;
-    top: 350px;
-    width: 25px;
-    left: 1%;
-    
+.arrow-left {
+  position: absolute;
+  top: 400px;
+  width: 25px;
+  left: 1%;
 
-    @include responsive(tablet) {
-        top: 320px;
-        width: 50px;
-        height: 50px;
-        left: 2%;
+  @include responsive(tablet) {
+    top: 320px;
+    width: 50px;
+    height: 50px;
+    left: 2%;
+  }
 
-    }
-
-    @include responsive(laptop) {
-        top: 500px;
-        left: 5%;
-        width: 50px;
-        height: 70px;
-
-    }
-
-   
-
+  @include responsive(laptop) {
+    top: 500px;
+    left: 5%;
+    width: 50px;
+    height: 70px;
+  }
 }
 
-.arrow-right{
-    position: absolute;
-    right: 1%;
-    top: 350px;
-    width: 25px;
-    
-    
-   transform: rotate(180deg);
+.arrow-right {
+  position: absolute;
+  right: 1%;
+  top: 400px;
+  width: 25px;
 
-   @include responsive(tablet) {
+  transform: rotate(180deg);
+
+  @include responsive(tablet) {
     top: 320px;
     width: 50px;
     height: 50px;
     right: 2%;
-
-}
-   @include responsive(laptop) {
+  }
+  @include responsive(laptop) {
     top: 500px;
     right: 5%;
     width: 50px;
     height: 70px;
-
-}
+  }
 }

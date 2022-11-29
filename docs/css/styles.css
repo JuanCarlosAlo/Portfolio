@@ -378,10 +378,6 @@ a {
 }
 
 /* Variables SASS */
-html {
-  font-size: 12px;
-}
-
 @font-face {
   font-family: fotr;
   src: url(../assets/fonts/fot-rodin-pro-cufonfonts/FOTRodin-Pro-M.otf);
@@ -390,18 +386,22 @@ html {
   font-family: red-seven;
   src: url(../assets/fonts/red-seven/Red\ Seven.otf);
 }
+html {
+  font-size: 12px;
+}
+
 body {
   position: relative;
   font-family: fotr;
   font-weight: 500;
-  background: hsl(0deg, 2%, 13%) url(/dist/assets/images/background-pattern-mobile.svg);
+  background: hsl(0deg, 2%, 13%) url(../assets/images/background-pattern-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 @media screen and (min-width: 1024px) {
   body {
-    background: hsl(0deg, 2%, 13%) url(/dist/assets/images/background-pattern-desktop.svg);
+    background: hsl(0deg, 2%, 13%) url(../assets/images/background-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-position: center 70vh;
   }
@@ -584,9 +584,11 @@ body {
   }
 }
 .menu__bar {
+  display: none;
   position: absolute;
+  top: -40px;
   height: 30px;
-  right: 20px;
+  right: 10px;
   width: 5px;
   background-color: var(--buttons);
 }
@@ -611,8 +613,11 @@ body {
   padding-right: 1rem;
   font-size: 1.2rem;
   width: 250px;
-  color: var(--white);
+  color: transparent;
   margin-bottom: 2.5rem;
+  transform: translateX(50%);
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
 }
 @media screen and (min-width: 1024px) {
   .menu__item {
@@ -683,6 +688,13 @@ body {
   transition: transform 0.5s;
   transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
 }
+.menu__item--show {
+  color: var(--white);
+  transform: translateX(0%);
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+}
+
 .logo {
   font-family: red-seven;
   margin-left: 1rem;
@@ -946,7 +958,7 @@ body {
 
 .arrow-left {
   position: absolute;
-  top: 350px;
+  top: 400px;
   width: 25px;
   left: 1%;
 }
@@ -970,7 +982,7 @@ body {
 .arrow-right {
   position: absolute;
   right: 1%;
-  top: 350px;
+  top: 400px;
   width: 25px;
   transform: rotate(180deg);
 }
