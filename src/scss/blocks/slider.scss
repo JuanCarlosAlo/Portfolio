@@ -5,7 +5,8 @@
 
 .slider{
     display: flex;
-   
+    transform: translateX(var(--slider-translate));
+    transition: transform 1s;
 
 &__content{
     min-width: 100%;

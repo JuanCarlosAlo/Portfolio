@@ -10,13 +10,13 @@
 }
 .arrow-left{
     position: absolute;
-    top: 35%;
+    top: 350px;
     width: 25px;
     left: 1%;
     
 
     @include responsive(tablet) {
-        top: 50%;
+        top: 320px;
         width: 50px;
         height: 50px;
         left: 2%;
@@ -24,6 +24,7 @@
     }
 
     @include responsive(laptop) {
+        top: 500px;
         left: 5%;
         width: 50px;
         height: 70px;
@@ -37,23 +38,21 @@
 .arrow-right{
     position: absolute;
     right: 1%;
-    top: 35%;
+    top: 350px;
     width: 25px;
     
     
    transform: rotate(180deg);
 
    @include responsive(tablet) {
-    top: 50%;
+    top: 320px;
     width: 50px;
     height: 50px;
     right: 2%;
-   
 
 }
-
-
    @include responsive(laptop) {
+    top: 500px;
     right: 5%;
     width: 50px;
     height: 70px;
