@@ -59,12 +59,12 @@
       &:hover .design__header__arrow {
         transition-property: transform;
         transition-duration: 0.5s;
-        transform: translateX(-90%);
+        transform: translateX(-80%);
       }
       &:hover .design__header__arrow--right {
         transition-property: transform;
         transition-duration: 0.5s;
-        transform: translateX(90%);
+        transform: translateX(80%);
       }
       &:hover {
         border: solid 1px lighten($light-blue, $amount: 1);

@@ -1,0 +1,80 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.modal{
+    position: relative;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+
+    &__container{
+       margin-left: 2rem;
+       margin-right: 2rem;
+    }
+
+    &__content{
+        display: flex;
+        gap: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    &__img-container{
+        position: relative;
+        padding: 3px;
+        width: 100%;
+        &::before{
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #ccc;
+        }
+    }
+
+    &__img-img{
+        position: relative;
+        z-index: 10;
+    }
+
+    &__img-box{
+        &-bg{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--white);
+
+            &--top-left{
+                top: 0;
+                left: 0;
+            }
+
+            &--top-right{
+                top: 0;
+                right: 0;
+            }
+            &--bottom-right{
+                bottom: 0;
+                right: 0;
+            }
+            &--bottom-left{
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+}
