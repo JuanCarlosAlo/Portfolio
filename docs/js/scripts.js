@@ -5,6 +5,10 @@ const arrowLeft = document.getElementById('arrow-left-slider')
 const arrowRight = document.getElementById('arrow-right-slider')
 const slider = document.getElementById('slider')
 const menuItem = document.getElementById('menu-item')
+const designItem = document.getElementById('design')
+const modalCross = document.getElementById('cross-icon')
+const modal = document.getElementById('modal')
+const modalImg = document.getElementById('modal-img')
 
 const allSliderContent = Array.from(document.querySelectorAll('.slider__content'))
 
@@ -56,6 +60,14 @@ menuIcon.addEventListener('click' , () => {
     
 
 });
+
+designItem.addEventListener('click' ,() => {
+    modal.classList.add('modal--show')
+})
+
+modalCross.addEventListener('click' , () =>{
+    modal.classList.toggle('modal--show')
+})
 
 window.addEventListener('resize' ,() => {
     rootStyles.setProperty('--transition-duration',0)

@@ -1,11 +1,12 @@
+.text {
+  margin-bottom: 4rem;
 
-
-.text{
-   margin-bottom: 4rem;
-
-   &--slider{
+  &--slider {
     padding-left: 1rem;
     padding-right: 1rem;
-   }
+  }
 }
 
+.modal__text {
+  margin-bottom: 2rem;
+}
