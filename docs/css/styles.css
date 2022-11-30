@@ -928,6 +928,9 @@ body {
   left: 0;
   top: -2px;
 }
+.hr--modal {
+  width: 100%;
+}
 .hr--menu {
   position: relative;
   height: 1px;
@@ -1177,21 +1180,41 @@ body {
   color: var(--white);
 }
 .modal__container {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+@media screen and (min-width: 1440px) {
+  .modal__container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 .modal__content {
   display: flex;
+  flex-direction: column;
   gap: 40px;
   margin-left: auto;
   margin-right: auto;
-  margin-left: 4rem;
-  margin-right: 4rem;
+}
+@media screen and (min-width: 1440px) {
+  .modal__content {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+@media screen and (min-width: 640px) {
+  .modal__content {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .modal__content {
+    flex-direction: row;
+  }
 }
 .modal__img-container {
   position: relative;
   padding: 3px;
-  width: 100%;
 }
 .modal__img-container::before {
   display: block;
@@ -1228,4 +1251,13 @@ body {
 .modal__img-box-bg--bottom-left {
   bottom: 0;
   left: 0;
+}
+
+.cross {
+  width: 20px;
+}
+@media screen and (min-width: 640px) {
+  .cross {
+    width: 30px;
+  }
 }
