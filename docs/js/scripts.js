@@ -5,10 +5,48 @@ const arrowLeft = document.getElementById('arrow-left-slider')
 const arrowRight = document.getElementById('arrow-right-slider')
 const slider = document.getElementById('slider')
 const menuItem = document.getElementById('menu-item')
-const designItem = document.getElementById('design')
+
 const modalCross = document.getElementById('cross-icon')
+
+
+const allMenuLinks = document.querySelectorAll('.menu__link')
+const allMenuItem = document.querySelectorAll('.menu__item')
+
+const designItem = document.getElementById('design')
 const modal = document.getElementById('modal')
 const modalImg = document.getElementById('modal-img')
+const modalTitle = document.getElementById('modal-title')
+const modalText = document.getElementById('modal-text')
+
+const designItems = [
+    {
+        title: 'Publicidad',
+        srcDesign: 'assets/images/modal-publicitario2.jpg',
+        text: 'Modal diseño publicitario'
+    },
+    {
+        title: 'Proyecto Your Reality',
+        srcDesign: 'assets/images/modal-your-reality.jpg',
+        text: 'Modal proyecto Your Reality'
+    },
+    {
+        title: 'Proyectos OMD',
+        srcDesign: 'assets/images/modal-omd',
+        text: 'Modal proyectos OMD'
+    },
+    {
+        title: 'Ilustracion',
+        srcDesign: 'assets/images/modal-ilustracion',
+        text: 'Modal Ilustracion'
+    },
+    {
+        title: 'Tokyo Stand',
+        srcDesign: 'assets/images/modal-tokyo',
+        text: 'Modal Tokyo Stand'
+    },
+    
+]
+
 
 const allSliderContent = Array.from(document.querySelectorAll('.slider__content'))
 
@@ -49,12 +87,15 @@ const prevSlide = () => {
 arrowRight.addEventListener('click', nextSlide)
 arrowLeft.addEventListener('click', prevSlide)
 
-const allMenuItems = document.querySelectorAll('.menu__item')
+
 
 menuIcon.addEventListener('click' , () => {
     rootStyles.setProperty('--transition-duration',1 + 's')
     menu.classList.toggle('menu--show')
-    allMenuItems.forEach(menuItem=>{
+    allMenuLinks.forEach(menuLink=>{
+        menuLink.classList.toggle('menu__link--show')
+    })
+    allMenuItem.forEach(menuItem=>{
         menuItem.classList.toggle('menu__item--show')
     })
     

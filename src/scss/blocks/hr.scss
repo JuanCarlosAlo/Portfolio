@@ -47,24 +47,37 @@
     width: 100%;
   }
 
-  &--menu {
-    position: relative;
-    height: 1px;
-    width: 120%;
-    background-color: var(--white);
-    top: 15px;
-    &::after {
-      @include pseudo(10px, 10px) {
-        background-color: var(--light-blue);
-        right: 0;
-        top: -10px;
-      }
-    }
-    @include responsive(laptop) {
-      display: none;
-    }
-    @include responsive(tablet) {
-      display: none;
-    }
+  // &--menu {
+  //   position: relative;
+  //   height: 1px;
+  //   width: 120%;
+  //   background-color: var(--white);
+  //   top: 15px;
+  //   transform: scaleX(0%);
+  //   transform: translateX(0%);
+  //   transition-duration: 0s;
+  //   &::after {
+  //     @include pseudo(10px, 10px) {
+  //       background-color: var(--light-blue);
+  //       right: 0;
+  //       top: -10px;
+  //     }
+  //   }
+  //   @include responsive(laptop) {
+  //     display: none;
+  //   }
+  //   @include responsive(tablet) {
+  //     display: none;
+  //   }
+  // }
+
+  &--menu--show{
+    transform: scaleX(100%);
+    transform: translateX(0%);
+    transform-origin: left;
+    transition-delay: 1s;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    
   }
 }
