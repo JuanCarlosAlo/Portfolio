@@ -131,12 +131,12 @@
 
 .cross {
   position: absolute;
-  top: 200px;
+  top: 10%;
   width: 20px;
 
   @include responsive(tablet) {
     width: 30px;
-    top: 40px;
+    top: 5%;
   }
   @include responsive(laptop) {
     width: 30px;
