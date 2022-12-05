@@ -21,27 +21,27 @@ const data = [
   {
     title: "Publicidad",
     src: "assets/images/modal-publicitario2.jpg",
-    text: "Modal diseño publicitario",
+    text: "Modal diseño publicitario,Lorem ipsum dolor sit amet consectetur adipiscing elit viverra pharetra et, odio curabitur lobortis netus aliquam vestibulum fringilla dui duis euismod, penatibus ultrices id aliquet tortor",
   },
   {
     title: "Proyecto Your Reality",
     src: "assets/images/modal-your-reality.jpg",
-    text: "Modal proyecto Your Reality",
+    text: "Modal proyecto Your Reality,Lorem ipsum dolor sit amet consectetur adipiscing elit viverra pharetra et, odio curabitur lobortis netus aliquam vestibulum fringilla dui duis euismod, penatibus ultrices id aliquet tortor",
   },
   {
     title: "Proyectos OMD",
     src: "assets/images/modal-omd.jpg",
-    text: "Modal proyectos OMD",
+    text: "Modal proyectos OMD,Lorem ipsum dolor sit amet consectetur adipiscing elit viverra pharetra et, odio curabitur lobortis netus aliquam vestibulum fringilla dui duis euismod, penatibus ultrices id aliquet tortor",
   },
   {
     title: "Ilustracion",
     src: "assets/images/modal-ilustration.jpg",
-    text: "Modal Ilustracion",
+    text: "Modal Ilustracion,Lorem ipsum dolor sit amet consectetur adipiscing elit viverra pharetra et, odio curabitur lobortis netus aliquam vestibulum fringilla dui duis euismod, penatibus ultrices id aliquet tortor",
   },
   {
     title: "Tokyo Stand",
     src: "assets/images/modal-tokyo.jpg",
-    text: "Modal Tokyo Stand",
+    text: "Modal Tokyo Stand,Lorem ipsum dolor sit amet consectetur adipiscing elit viverra pharetra et, odio curabitur lobortis netus aliquam vestibulum fringilla dui duis euismod, penatibus ultrices id aliquet tortor",
   },
 ];
 
