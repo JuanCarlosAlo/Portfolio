@@ -933,6 +933,11 @@ body {
     gap: 100px;
   }
 }
+.slider__buttons--link {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
 
 .slider__container {
   margin-left: auto;
@@ -1148,15 +1153,15 @@ body {
     transition-duration: 0.5s;
     opacity: 0;
   }
-  .design:hover .design__header__arrow {
+  .design:hover .design__header__title::after {
     transition-property: transform;
     transition-duration: 0.5s;
-    transform: translateX(-80%);
+    transform: translateX(-70px);
   }
-  .design:hover .design__header__arrow--right {
+  .design:hover .design__header__title::before {
     transition-property: transform;
     transition-duration: 0.5s;
-    transform: translateX(80%);
+    transform: translateX(70px);
   }
   .design:hover {
     border: solid 1px #c4ced9;
@@ -1212,35 +1217,64 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: center;
   width: 100%;
 }
-.design__header__arrow {
-  height: 30px;
+.design__header__title {
+  position: relative;
+  width: 150px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.design__header__title::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  left: -15px;
+  top: 50%;
+  background-color: var(--white);
   transition-property: transform;
   transition-duration: 0.5s;
   transform: translateX(0);
 }
-.design__header__arrow--right {
-  height: 30px;
+.design__header__title::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  right: -15px;
+  top: 50%;
+  background-color: var(--white);
   transition-property: transform;
   transition-duration: 0.5s;
   transform: translateX(0);
 }
 
 .modal {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
-  position: fixed;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 6rem;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   color: var(--white);
   z-index: 100;
   transform: scale(0%);
+}
+@media screen and (min-width: 640px) {
+  .modal {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .modal {
+    align-items: center;
+  }
 }
 .modal__container {
   margin-left: 1rem;
@@ -1273,6 +1307,11 @@ body {
 .modal__img-container {
   position: relative;
   padding: 3px;
+}
+@media screen and (min-width: 640px) {
+  .modal__img-container {
+    top: 30px;
+  }
 }
 @media screen and (min-width: 1440px) {
   .modal__img-container {
@@ -1314,13 +1353,13 @@ body {
   right: 0;
   background: linear-gradient(var(--white) 7%, transparent 7% 93%, var(--white) 93%);
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 640px) {
   .modal__img-box::after {
     content: "";
     position: absolute;
     width: 20px;
     height: 100%;
-    background: linear-gradient(var(--white) 20px, transparent 20px 318px, var(--white) 318px);
+    background: linear-gradient(var(--white) 20px, transparent 20px 479px, var(--white) 479px);
   }
   .modal__img-box::before {
     content: "";
@@ -1330,6 +1369,42 @@ body {
     top: 0;
     right: 0;
     background: linear-gradient(var(--white) 20px, transparent 20px 318px, var(--white) 318px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .modal__img-box::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(var(--white) 20px, transparent 20px 312px, var(--white) 312px);
+  }
+  .modal__img-box::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: linear-gradient(var(--white) 20px, transparent 20px 312px, var(--white) 312px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .modal__img-box::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(var(--white) 20px, transparent 20px 376px, var(--white) 376px);
+  }
+  .modal__img-box::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: linear-gradient(var(--white) 20px, transparent 20px 376px, var(--white) 376px);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1345,7 +1420,7 @@ body {
 
 .cross {
   position: absolute;
-  top: 10%;
+  top: 4%;
   width: 20px;
 }
 @media screen and (min-width: 640px) {

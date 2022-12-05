@@ -4,21 +4,27 @@
 @use "../config/variables.scss" as *;
 
 .modal {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
-  position: fixed;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 6rem;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
   color: var(--white);
   z-index: 100;
   transform: scale(0%);
-
+  @include responsive(tablet) {
+    align-items: center;
+  }
+  @include responsive(laptop) {
+    align-items: center;
+  }
   &__container {
+   
     margin-left: 1rem;
     margin-right: 1rem;
 
@@ -47,6 +53,9 @@
   &__img-container {
     position: relative;
     padding: 3px;
+    @include responsive(tablet) {
+      top: 30px;
+    }
     @include responsive(desktop) {
       width: 50%;
     }
@@ -94,14 +103,13 @@
         );
       }
     }
-
-    @include responsive(desktop) {
+    @include responsive(tablet) {
       &::after {
         @include pseudo(20px, 100%) {
           background: linear-gradient(
             var(--white) 20px,
-            transparent 20px 318px,
-            var(--white) 318px
+            transparent 20px 479px,
+            var(--white) 479px
           );
         }
       }
@@ -113,6 +121,51 @@
             var(--white) 20px,
             transparent 20px 318px,
             var(--white) 318px
+          );
+        }
+      }
+    }
+    @include responsive(laptop) {
+      &::after {
+        @include pseudo(20px, 100%) {
+          background: linear-gradient(
+            var(--white) 20px,
+            transparent 20px 312px,
+            var(--white) 312px
+          );
+        }
+      }
+      &::before {
+        @include pseudo(20px, 100%) {
+          top: 0;
+          right: 0;
+          background: linear-gradient(
+            var(--white) 20px,
+            transparent 20px 312px,
+            var(--white) 312px
+          );
+        }
+      }
+    }
+
+    @include responsive(desktop) {
+      &::after {
+        @include pseudo(20px, 100%) {
+          background: linear-gradient(
+            var(--white) 20px,
+            transparent 20px 376px,
+            var(--white) 376px
+          );
+        }
+      }
+      &::before {
+        @include pseudo(20px, 100%) {
+          top: 0;
+          right: 0;
+          background: linear-gradient(
+            var(--white) 20px,
+            transparent 20px 376px,
+            var(--white) 376px
           );
         }
       }
@@ -131,7 +184,7 @@
 
 .cross {
   position: absolute;
-  top: 10%;
+  top: 4%;
   width: 20px;
 
   @include responsive(tablet) {
