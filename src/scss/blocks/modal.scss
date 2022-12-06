@@ -54,6 +54,8 @@
 
   &__img-container {
     position: relative;
+    height: 100%;
+    max-width: fit-content;
     padding: 3px;
     @include responsive(tablet) {
       top: 30px;
@@ -78,7 +80,7 @@
     position: relative;
     z-index: 10;
     width: 100%;
-    height: 100%;
+
     background-color: red;
   }
 
@@ -107,44 +109,44 @@
     }
     @include responsive(tablet) {
       &::after {
-        @include pseudo(20px, 100%) {
+        @include pseudo(3.2%, 100%) {
           background: linear-gradient(
-            var(--white) 20px,
-            transparent 20px 479px,
-            var(--white) 479px
+            var(--white) 4%,
+            transparent 4% 96%,
+            var(--white) 96%
           );
         }
       }
       &::before {
-        @include pseudo(20px, 100%) {
+        @include pseudo(3.2%, 100%) {
           top: 0;
           right: 0;
           background: linear-gradient(
-            var(--white) 20px,
-            transparent 20px 318px,
-            var(--white) 318px
+            var(--white) 4%,
+            transparent 4% 96%,
+            var(--white) 96%
           );
         }
       }
     }
     @include responsive(laptop) {
       &::after {
-        @include pseudo(20px, 100%) {
+        @include pseudo(4.2%, 100%) {
           background: linear-gradient(
-            var(--white) 20px,
-            transparent 20px 312px,
-            var(--white) 312px
+            var(--white) 5%,
+            transparent 5% 95%,
+            var(--white) 95%
           );
         }
       }
       &::before {
-        @include pseudo(20px, 100%) {
+        @include pseudo(4.2%, 100%) {
           top: 0;
           right: 0;
           background: linear-gradient(
-            var(--white) 20px,
-            transparent 20px 312px,
-            var(--white) 312px
+            var(--white) 5%,
+            transparent 5% 95%,
+            var(--white) 95%
           );
         }
       }
@@ -152,22 +154,22 @@
 
     @include responsive(desktop) {
       &::after {
-        @include pseudo(20px, 100%) {
+        @include pseudo(4%, 100%) {
           background: linear-gradient(
-            var(--white) 20px,
-            transparent 20px 376px,
-            var(--white) 376px
+            var(--white) 5%,
+            transparent 5% 95%,
+            var(--white) 95%
           );
         }
       }
       &::before {
-        @include pseudo(20px, 100%) {
+        @include pseudo(4%, 100%) {
           top: 0;
           right: 0;
           background: linear-gradient(
-            var(--white) 20px,
-            transparent 20px 376px,
-            var(--white) 376px
+            var(--white) 5%,
+            transparent 5% 95%,
+            var(--white) 95%
           );
         }
       }
