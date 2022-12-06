@@ -6,17 +6,18 @@
 .skill-list{
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
+    margin-left: 1rem;
 }
 
 .skill-item{
     position: relative;
-    // &::after{
-    //     @include pseudo(150px, 1px){
-    //         left: 0;
-    //       top: 25px;
-    //       background-color: var(--white);
-    //     }
+    &::after{
+        @include pseudo(150px, 1px){
+          left: 0;
+          top: 25px;
+          background-color: var(--white);
+        }
         
-    //   }
+      }
 }

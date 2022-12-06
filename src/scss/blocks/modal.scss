@@ -16,7 +16,12 @@
   background-color: rgba(0, 0, 0, 0.8);
   color: var(--white);
   z-index: 100;
-  transform: scale(0%);
+  
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scaleX(0);
+
   @include responsive(tablet) {
     padding-top: 2rem;
     align-items: center;
@@ -26,7 +31,9 @@
     align-items: center;
   }
   &__container {
-   
+    transition: opacity 0.5s;
+    transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+    opacity: 0;
     margin-left: 1rem;
     margin-right: 1rem;
 
@@ -207,5 +214,16 @@
 }
 
 .modal--show {
-  transform: scale(100%);
+  
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+  transform: scaleX(1);
+}
+
+.modal__container--show {
+  
+  transition: opacity 0.5s;
+  transition-delay: 0.5s;
+  transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+  opacity: 1;
 }
