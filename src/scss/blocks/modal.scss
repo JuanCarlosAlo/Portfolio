@@ -18,9 +18,11 @@
   z-index: 100;
   transform: scale(0%);
   @include responsive(tablet) {
+    padding-top: 6rem;
     align-items: center;
   }
   @include responsive(laptop) {
+    padding-top: 0;
     align-items: center;
   }
   &__container {
@@ -194,6 +196,11 @@
   @include responsive(laptop) {
     width: 30px;
     top: 200px;
+    &:hover{
+      @include hover{
+        cursor: pointer;
+      }
+    }
   }
 }
 

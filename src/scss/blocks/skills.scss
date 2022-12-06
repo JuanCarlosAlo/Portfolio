@@ -1,0 +1,22 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+.skill-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skill-item{
+    position: relative;
+    // &::after{
+    //     @include pseudo(150px, 1px){
+    //         left: 0;
+    //       top: 25px;
+    //       background-color: var(--white);
+    //     }
+        
+    //   }
+}

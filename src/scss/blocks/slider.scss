@@ -27,24 +27,57 @@
     padding-left: 10%;
     padding-right: 10%;
     height: 100%;
-    background-color: rgba(81, 81, 88, 0.8);
+    background-color: rgba(0, 0, 0, 0.25);
   
 }
 
 &__buttons{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    align-items: flex-end;
+    gap: 5px;
+    margin-bottom: 1rem;
 
     @include responsive(tablet) {
         justify-content: flex-start;
         gap: 100px;
         
         }
+        &--code{
+            width: 100%;
+        }
         &--link{
             display: flex;
-            justify-content: space-between;
-            width: 200px;
+            justify-content: flex-end;
+            gap: 10%;
+            align-items: center;
+            width: 100%;
+
+            &--git,
+            &--demo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90px;
+                height: 30px;
+                font-size: 0.8rem;
+                background-color: transparent;
+                color: var(--white);
+                border: solid 1px var(--white);
+
+                @include responsive(laptop) {
+                    &:hover{
+                        @include hover{
+                            background-color: var(--black-transparent);
+                            color: var(--white);
+                            transition-property: background-color;
+                            transition-duration: 0.5s;
+                            cursor: pointer;
+
+                        }
+                    }
+                    }
+            }
         }
 }
    

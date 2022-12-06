@@ -369,17 +369,17 @@ a {
 }
 
 :root {
-  --dark-blue: rgb(81, 81, 88);
-  --buttons:hsl(224, 9%, 64%);
-  --light-blue:hsl(211, 21%, 80%);
-  --white: hsl(182, 100%, 97%);
+  --black: hsl(0,0%,0%);
+  --black-transparent: rgba(0, 0, 0, 0.8);
+  --white: hsl(0, 0%, 100%);
+  --background: hsl(0, 2%, 13%);
   --center-light:hsl(211, 35%, 72%);
   --corner-dark: hsl(224, 20%, 56%);
   --center-dark:hsl(240, 11%, 30%);
   --corner-darker: hsl(224, 16%, 26%);
   --transition-duration:0;
   --titles:3rem;
-  --titles-mobile:2rem;
+  --titles-mobile:2.5rem;
   --text:0.75rem;
   --padding-left-right-desktop: 10rem;
   --padding-left-right-tablet: 6rem;
@@ -396,7 +396,7 @@ a {
   src: url(../assets/fonts/red-seven/Red\ Seven.otf);
 }
 html {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 body {
@@ -424,6 +424,11 @@ body {
   margin-bottom: 2rem;
   font-size: var(--titles-mobile);
 }
+@media screen and (min-width: 640px) {
+  .article-title {
+    font-size: var(--titles);
+  }
+}
 @media screen and (min-width: 1024px) {
   .article-title {
     font-size: var(--titles);
@@ -448,6 +453,11 @@ body {
   margin-bottom: 2rem;
   font-size: var(--titles-mobile);
 }
+@media screen and (min-width: 640px) {
+  .modal__title {
+    font-size: var(--titles);
+  }
+}
 @media screen and (min-width: 1024px) {
   .modal__title {
     font-size: var(--titles);
@@ -455,15 +465,25 @@ body {
 }
 
 .text {
-  margin-bottom: 4rem;
+  line-height: 25px;
 }
 .text--slider {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+@media screen and (min-width: 640px) {
+  .text--slider {
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .text--slider {
+    padding-left: 0;
+  }
+}
 
-.modal__text {
-  margin-bottom: 2rem;
+.text--padding-bottom {
+  padding-bottom: 2rem;
 }
 
 .header__top {
@@ -533,6 +553,7 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
   color: var(--white);
+  padding-bottom: 4rem;
 }
 @media screen and (min-width: 1024px) {
   .footer {
@@ -569,7 +590,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
-  color: var(--light-blue);
+  color: var(--white);
 }
 
 .menu-container {
@@ -635,7 +656,7 @@ body {
   height: 30px;
   right: 10px;
   width: 5px;
-  background-color: var(--buttons);
+  background-color: var(--white);
 }
 @media screen and (min-width: 1024px) {
   .menu__bar {
@@ -724,15 +745,13 @@ body {
 }
 @media screen and (min-width: 1024px) and (hover: hover) {
   .menu__item:hover {
-    background-color: var(--dark-blue);
-    color: var(--light-blue);
+    background-color: var(--black-transparent);
+    color: var(--white);
     transition-property: transform, background-color, height;
     transition-duration: 0.5s;
     transform: translateY(4px);
     height: 39px;
-  }
-  .menu__item:hover::after {
-    background-color: var(--dark-blue);
+    cursor: pointer;
   }
 }
 @media screen and (min-width: 640px) {
@@ -920,12 +939,14 @@ body {
   padding-left: 10%;
   padding-right: 10%;
   height: 100%;
-  background-color: rgba(81, 81, 88, 0.8);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 .slider__buttons {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  align-items: flex-end;
+  gap: 5px;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 640px) {
   .slider__buttons {
@@ -933,10 +954,35 @@ body {
     gap: 100px;
   }
 }
+.slider__buttons--code {
+  width: 100%;
+}
 .slider__buttons--link {
   display: flex;
-  justify-content: space-between;
-  width: 200px;
+  justify-content: flex-end;
+  gap: 10%;
+  align-items: center;
+  width: 100%;
+}
+.slider__buttons--link--git, .slider__buttons--link--demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 30px;
+  font-size: 0.8rem;
+  background-color: transparent;
+  color: var(--white);
+  border: solid 1px var(--white);
+}
+@media screen and (min-width: 1024px) and (hover: hover) {
+  .slider__buttons--link--git:hover, .slider__buttons--link--demo:hover {
+    background-color: var(--black-transparent);
+    color: var(--white);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
 }
 
 .slider__container {
@@ -981,7 +1027,7 @@ body {
   position: absolute;
   width: 4px;
   height: 4px;
-  background-color: var(--light-blue);
+  background-color: var(--white);
   right: 0;
   top: -2px;
 }
@@ -990,7 +1036,7 @@ body {
   position: absolute;
   width: 4px;
   height: 4px;
-  background-color: var(--light-blue);
+  background-color: var(--white);
   left: 0;
   top: -2px;
 }
@@ -1102,7 +1148,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 1px var(--dark-blue);
+  border: solid 1px #666666;
   background-color: rgba(0, 0, 0, 0.5);
   transition-property: background-color, border;
   transition-duration: 0.5s;
@@ -1156,18 +1202,19 @@ body {
   .design:hover .design__header__title::after {
     transition-property: transform;
     transition-duration: 0.5s;
-    transform: translateX(-70px);
+    transform: translateX(-50px);
   }
   .design:hover .design__header__title::before {
     transition-property: transform;
     transition-duration: 0.5s;
-    transform: translateX(70px);
+    transform: translateX(50px);
   }
   .design:hover {
-    border: solid 1px #c4ced9;
+    border: solid 1px var(--white);
     background-color: rgba(0, 0, 0, 0.8);
     transition-property: background-color border;
     transition-duration: 0.5s;
+    cursor: pointer;
   }
 }
 .design__img {
@@ -1215,14 +1262,11 @@ body {
 }
 .design__header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
 .design__header__title {
   position: relative;
-  width: 150px;
   text-align: center;
   font-size: 1.2rem;
 }
@@ -1268,11 +1312,13 @@ body {
 }
 @media screen and (min-width: 640px) {
   .modal {
+    padding-top: 6rem;
     align-items: center;
   }
 }
 @media screen and (min-width: 1024px) {
   .modal {
+    padding-top: 0;
     align-items: center;
   }
 }
@@ -1435,7 +1481,22 @@ body {
     top: 200px;
   }
 }
+@media screen and (min-width: 1024px) and (hover: hover) {
+  .cross:hover {
+    cursor: pointer;
+  }
+}
 
 .modal--show {
   transform: scale(100%);
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-item {
+  position: relative;
 }

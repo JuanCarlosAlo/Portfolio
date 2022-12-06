@@ -9,7 +9,9 @@
   font-weight: 300;
   margin-bottom: 2rem;
   font-size: var(--titles-mobile);
-
+  @include responsive(tablet) {
+    font-size: var(--titles);
+  }
   @include responsive(laptop) {
     font-size: var(--titles);
   }
@@ -29,7 +31,9 @@
   font-weight: 300;
   margin-bottom: 2rem;
   font-size: var(--titles-mobile);
-
+  @include responsive(tablet) {
+    font-size: var(--titles);
+  }
   @include responsive(laptop) {
     font-size: var(--titles);
   }

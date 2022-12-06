@@ -1,12 +1,23 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
 .text {
-  margin-bottom: 4rem;
+  line-height: 25px;
 
   &--slider {
     padding-left: 1rem;
     padding-right: 1rem;
+    @include responsive(tablet) {
+      padding-left: 0;
+    }
+    @include responsive(laptop) {
+      padding-left: 0;
+    }
   }
 }
 
-.modal__text {
-  margin-bottom: 2rem;
+.text--padding-bottom{
+  padding-bottom: 2rem;
 }

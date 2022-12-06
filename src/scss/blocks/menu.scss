@@ -62,7 +62,7 @@
     height: 30px;
     right: 10px;
     width: 5px;
-    background-color: var(--buttons);
+    background-color: var(--white);
 
     @include responsive(laptop) {
       height: 30px;
@@ -84,6 +84,7 @@
       transform: translateX(0%);
       transition-duration: 0s;
       transition-delay: 0s;
+     
     }
     @include responsive(tablet) {
       transform: translateX(0%);
@@ -143,16 +144,14 @@
 
       &:hover {
         @include hover {
-          background-color: var(--dark-blue);
-          color: var(--light-blue);
+          background-color: var(--black-transparent);
+          color: var(--white);
           transition-property: transform, background-color, height;
           transition-duration: 0.5s;
           transform: translateY(4px);
           height: 39px;
+          cursor: pointer;
 
-          &::after {
-            background-color: var(--dark-blue);
-          }
         }
       }
     }
