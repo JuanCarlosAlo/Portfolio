@@ -1,18 +1,19 @@
 # Portfolio J.C.A.M
 
-![Imagen del proyecto](https://github.com/JuanCarlosAlo/insure/blob/main/docs/assets/insure.jpg?raw=true)
+![Imagen del proyecto](https://github.com/JuanCarlosAlo/Portfolio/blob/main/docs/assets/images/readme-intro.jpg?raw=true)
 
 ## Ejemplo en vivo
 
-- [GitHub](https://juancarlosalo.github.io/insure/)
+- [GitHub](https://juancarlosalo.github.io/Portfolio/)
 
 ## Descripción
 
-Insure es una empresa de seguros con un diverso catalogo de servicios disponible acorde a las necesidades de sus clientes.
+Este es mi portfolio personal diseñado y desarrollado por mi. En este porfolio hay informacion sobre mi ademas de proyectos web desarrollados por mi, proyectos relacionados con el diseño y mi contacto.
 
 ## ¿Qué he aprendido en este proyecto?
 
-El mayor reto de esta web es la disposicion de los patrones en el fondo, añadiendo la imagen del header al inicio con background-position. Ademas de seguir practicando con sass y javascript.
+En este proyecto he puesto en practica y a
+prueba todos mis conocimientos hasta el momento, HTML, CSS, SASS, JavaScript, BEM ademas de mis conocimientos de diseño aplicandolos a diseño web.
 
 ## Tecnologías
 

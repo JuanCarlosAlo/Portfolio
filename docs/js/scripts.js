@@ -124,3 +124,69 @@ modalCross.addEventListener("click", () => {
 window.addEventListener("resize", () => {
   rootStyles.setProperty("--transition-duration", 0);
 });
+
+const fadeLeft = document.querySelectorAll(".fade-left");
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 1,
+};
+
+const callback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-left-on");
+    }
+  });
+};
+
+const elementobserver = new IntersectionObserver(callback, options);
+
+fadeLeft.forEach((fade) => {
+  elementobserver.observe(fade);
+});
+
+const fadeBottom = document.querySelectorAll(".fade-bottom");
+const optionBottom = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.4,
+};
+
+const callbackBottom = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-bottom-on");
+    }
+  });
+};
+
+const elementobserverBottom = new IntersectionObserver(
+  callbackBottom,
+  optionBottom
+);
+
+fadeBottom.forEach((fade) => {
+  elementobserverBottom.observe(fade);
+});
+
+const hr = document.querySelectorAll(".hr");
+const optionHr = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0,
+};
+
+const callbackHr = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("hr-out");
+    }
+  });
+};
+
+const elementObserverHr = new IntersectionObserver(callbackHr, optionHr);
+
+hr.forEach((hr) => {
+  elementObserverHr.observe(hr);
+});

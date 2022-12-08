@@ -1,0 +1,39 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+
+.fade-left{
+    transform: translateX(-140px);
+    opacity: 0;
+    transition: opacity 1.4s cubic-bezier(.215,.61,.355,1),
+    transform 1.8s cubic-bezier(.215,.61,.355,1);
+}
+.fade-bottom{
+    transform: translateY(140px);
+    opacity: 0;
+    transition: opacity 1.4s cubic-bezier(.215,.61,.355,1),
+    transform 1.8s cubic-bezier(.215,.61,.355,1);
+}
+
+.fade-left-on{
+    transition-delay: 0.4s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-bottom-on{
+    transition-delay: 0.4s;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.hr{
+    width: 0;
+    transition: width .8s ease .6s;
+}
+
+.hr-out{
+    width: 100%;
+}

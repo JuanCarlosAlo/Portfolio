@@ -1,0 +1,27 @@
+@use "../mixins/responsive.scss" as *;
+@use "../mixins/pseudo.scss" as *;
+@use "../mixins/hover.scss" as *;
+@use "../config/variables.scss" as *;
+
+
+.linkedin,
+.github{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    &:hover .icon{
+        @include hover{
+            transform: translateY(-5px);
+            transition: transform 0.5s;
+        }
+    }
+}
+
+.icon{
+    font-size: 1.5rem;
+    transform: translateY(0px);
+    transition: transform 0.5s;
+    
+}
