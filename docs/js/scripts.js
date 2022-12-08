@@ -128,7 +128,7 @@ window.addEventListener("resize", () => {
 const fadeLeft = document.querySelectorAll(".fade-left");
 const options = {
   root: null,
-  rootMargin: "0px",
+  rootMargin: "0px 200px",
   threshold: 1,
 };
 
