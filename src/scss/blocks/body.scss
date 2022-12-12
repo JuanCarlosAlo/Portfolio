@@ -10,18 +10,43 @@ body {
   position: relative;
   font-family: fotr;
   font-weight: 500;
-  background: hsl(0, 2%, 13%)
-    url(../assets/images/background-pattern-mobile.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  background: 
+    url(../assets/images/bg-left.svg) -300px 200vh no-repeat,
+    url(../assets/images/bg-right.svg) -800px 100vh no-repeat,
+    hsl(0, 2%, 13%);
 
-  @include responsive(laptop) {
-    background: hsl(0, 2%, 13%)
-      url(../assets/images/background-pattern-desktop.svg);
-    background-repeat: no-repeat;
-    background-position: center 70vh;
-  }
+    @include responsive(tablet) {
+      background:
+        url(../assets/images/bg-left.svg) -500px 180vh no-repeat,
+        url(../assets/images/bg-right.svg) -400px 50vh no-repeat,
+        hsl(0, 2%, 13%);
+     
+      background-repeat: no-repeat ;
+      
+    }
+    @include responsive(laptop) {
+      background:
+        url(../assets/images/bg-left.svg) -300px 180vh no-repeat,
+        url(../assets/images/bg-right.svg) 300px 80vh no-repeat,
+        hsl(0, 2%, 13%);
+     
+      background-repeat: no-repeat ;
+      
+    }
+    
+ 
+  @include responsive(desktop) {
+      background:
+        url(../assets/images/bg-left.svg) -300px 180vh no-repeat,
+        url(../assets/images/bg-right.svg) 300px 80vh no-repeat,
+        hsl(0, 2%, 13%);
+     
+      background-repeat: no-repeat ;
+      
+    }
+
+ 
+ 
 
   //    &::after{
   //     @include pseudo(100%, 100%){

@@ -150,7 +150,7 @@ const fadeBottom = document.querySelectorAll(".fade-bottom");
 const optionBottom = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.4,
+  threshold: 0.2,
 };
 
 const callbackBottom = (entries, observer) => {
@@ -190,3 +190,24 @@ const elementObserverHr = new IntersectionObserver(callbackHr, optionHr);
 hr.forEach((hr) => {
   elementObserverHr.observe(hr);
 });
+
+const fadeRight = document.getElementById("fade-right");
+const optionRight = {
+  root: null,
+  rootMargin: "0px 200px",
+  threshold: 0,
+};
+
+const callbackRight = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("fade-right-on");
+    }
+  });
+};
+
+const elementObserverRight = new IntersectionObserver(
+  callbackRight,
+  optionRight
+);
+elementObserverRight.observe(fadeRight);

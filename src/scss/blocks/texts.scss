@@ -9,8 +9,9 @@
   &--slider {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 2rem;
     @include responsive(tablet) {
-      padding-left: 0;
+      padding-left: 1rem;
     }
     @include responsive(laptop) {
       padding-left: 0;
