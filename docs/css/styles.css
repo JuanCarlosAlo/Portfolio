@@ -420,7 +420,7 @@ body {
 }
 @media screen and (min-width: 1440px) {
   body {
-    background: url(../assets/images/bg-left.svg) -300px 180vh no-repeat, url(../assets/images/bg-right.svg) 300px 80vh no-repeat, hsl(0deg, 2%, 13%);
+    background: url(../assets/images/bg-left.svg) -300px 180vh no-repeat, url(../assets/images/bg-right.svg) calc(100% + 200px) 80vh no-repeat, hsl(0deg, 2%, 13%);
     background-repeat: no-repeat;
   }
 }
