@@ -27,12 +27,37 @@
   }
 
   &-img{
-    
+    position: relative;
     @include responsive(tablet) {
         width: 350px;
       }
       @include responsive(desktop) {
         width: 350px;
+      }
+      &--shadow{
+        position: absolute;
+        top: 7px;
+        left: -31px;
+        z-index: -20;
+        animation-name: shadow;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+
+        @keyframes shadow {
+          0% {
+          transform: translateX(0px);
+
+           }
+    
+
+           100%{
+
+          transform: translateX(33px);
+
+          
+           }
+          }
       }
   }
 

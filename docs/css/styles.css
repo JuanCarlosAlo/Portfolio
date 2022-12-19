@@ -951,6 +951,9 @@ body {
   bottom: 0;
   border: 1px solid #ccc;
 }
+.about-me-img {
+  position: relative;
+}
 @media screen and (min-width: 640px) {
   .about-me-img {
     width: 350px;
@@ -959,6 +962,24 @@ body {
 @media screen and (min-width: 1440px) {
   .about-me-img {
     width: 350px;
+  }
+}
+.about-me-img--shadow {
+  position: absolute;
+  top: 7px;
+  left: -31px;
+  z-index: -20;
+  animation-name: shadow;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes shadow {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(33px);
   }
 }
 .about-me__img-img {
