@@ -30,15 +30,11 @@ Si quieres echar un vistazo al proyecto, te recomiendo:
 
 ## Ordenador
 
-![Captura del proyecto](https://github.com/JuanCarlosAlo/insure/blob/main/docs/assets/read-me-img-1.jpg?raw=true)
-
-## Estados activos
-
-![Captura del proyecto](https://github.com/JuanCarlosAlo/insure/blob/main/docs/assets/read-me-img-2.jpg?raw=true)
+![Captura del proyecto](https://github.com/JuanCarlosAlo/Portfolio/blob/main/docs/assets/images/readme-desktop.jpg?raw=true)
 
 ## Movil
 
-![Captura del proyecto](https://github.com/JuanCarlosAlo/insure/blob/main/docs/assets/read-me-img-3.jpg?raw=true)
+![Captura del proyecto](https://github.com/JuanCarlosAlo/Portfolio/blob/main/docs/assets/images/readme-mobile.jpg.png?raw=true)
 
 ## Autor
 
