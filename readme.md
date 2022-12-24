@@ -32,6 +32,10 @@ Si quieres echar un vistazo al proyecto, te recomiendo:
 
 ![Captura del proyecto](https://github.com/JuanCarlosAlo/Portfolio/blob/main/docs/assets/images/readme-desktop.jpg?raw=true)
 
+## Tablet
+
+![Captura del proyecto](https://github.com/JuanCarlosAlo/Portfolio/blob/main/docs/assets/images/readme-tablet.jpg.png?raw=true)
+
 ## Movil
 
 ![Captura del proyecto](https://github.com/JuanCarlosAlo/Portfolio/blob/main/docs/assets/images/readme-mobile.jpg.png?raw=true)
